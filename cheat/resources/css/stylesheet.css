@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: lightgrey;
+}
+
+header{
+    width: 100%;
+    position:fixed;
+    z-index: 10;
+    background-color: lightblue;
+}
+
+header ul{
+    width: 100%;
+    text-align: center;
+    background-color: lightblue;
+}
+
+header li{
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.mainav{
+    font-size: 20px;
+    font-family: 'Raleway';
+}
+
+.pagenav{
+    font-size: 18px;
+    font-family: 'Raleway';
+}
+
+h1{
+    text-align:center;
+    color:pink;
+}
+
+h2, h3{
+    text-align: center;
+    margin: 20px auto;
+}
+
+p{
+    font-size: 15px;
+    margin:auto 5%;
+}
+
+main{
+    position: relative;
+    top: 150px;
+}
+
+table{
+    margin: 20px auto;
+    border: 2px solid;
+}
+
+thead{
+    font-size: large;
+    font-weight: bold;
+    border: 2px auto;
+}
+
+table td{
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+#basics{
+    text-align:center;
+}
+
+.code{
+    color:lime;
+    background-color: grey;
+    padding: 0 5px;
+    font-family: monospace;
+}
+
+.example{
+    display: inline-block;
+    text-align: left;
+    background-color: grey;
+    padding: 2px 5px;
+    margin: 5px 10px;
+}
+
+.indent{
+    margin-left: 20px;
+}
+
+#box{
+    
+    margin:0 auto;
+    text-align: center;
+}
+
+img{
+    display: inline;
+    margin: 0 auto;
+}

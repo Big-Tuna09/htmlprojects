@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MY Cheat Sheet</title>
+        <link rel="stylesheet" href="./resources/css/stylesheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header> 
+            
+            <ul class="mainav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html.html">html</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">javascript</a></li>
+                <li><a href="bash.html">bash</a></li>
+            </ul>
+            <ul class="pagenav">
+                <li> <a href="#basics">Basics</a></li>
+                <li><a href= "#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+                
+            </ul>
+        </header>
+        
+        <main>
+            <h1>My cheat sheet to basic commands in web development(html)</h1>
+            <div id="basics">
+            <h2>Basics</h2>
+             <h3> All commands need closing tag(&lt;/&gt;) unless otherwise stated</h3>
+            
+                <p>Attributes are assigned in opening brackets eg <span class="code">&lt;div class="header"&gt;</span></p>
+                <table>
+                <thead>
+                    <tr>
+                        <td>syntax</td>
+                        <td>name</td>
+                        <td>description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="code">&lt;!DOCTYPE html&gt;</span></td>
+                        <td>declares doc type</td>
+                        <td>declares file as html to browser does not need closing brackets</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;html&gt;</span></td>
+                        <td>starts and ends html</td>
+                        <td>everything between is html</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;head&gt;</span></td>
+                        <td>starts head section</td>
+                        <td>the head section is for meta data not shown on actual webpage eg. title</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;body&gt;</span></td>
+                        <td>starts body</td>
+                        <td>everything in the body ection is the content actually on the webpage</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;header&gt; &lt;main&gt; &lt;footer&gt; &lt;div&gt;</span></td>
+                        <td>starts different sections</td>
+                        <td>sections to easily read html. div is generic</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;h1&gt;&lt;h2&gt;...&lt;h6&gt;</span></td>
+                        <td>different heading sections</td>
+                        <td>should have only one h1 section per page.</td>
+                    </tr>
+                    <tr>
+                        <td ><span class="code">&lt;p&gt;</span></td>
+                        <td>paragraph</td>
+                        <td>usually contains the main body of text on the page</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;br&gt;</span></td>
+                        <td>line break</td>
+                        <td>makes a line break anywhere</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <div id='media'>
+                <h2>Media</h2>
+                <h3>
+                    Images
+                </h3>
+                    <p><span class="code">&lt;img src="url.com/dumbimage.jpg width=123px&gt;</span></p>
+                    <p>Images do not need a closing tag. Atrributes in opening tag. Must have src=url. can also be used to link to a
+                        relative path <Span class=code>&lt;img src=../media/dumbumage.jpg&gt;</Span> can have attributes such as sizing in pixels and %
+                    </p>
+                <h3>
+                    Video
+                </h3>
+                <h3>Embed</h3>
+            </div>
+        </main>
+    </body>
+</html>
