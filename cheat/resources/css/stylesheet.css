@@ -38,6 +38,11 @@ header li{
     font-family: 'Raleway';
 }
 
+footer{
+    min-height: 10px;
+    margin-bottom: 10%;
+}
+
 h1{
     text-align:center;
     color:pink;
