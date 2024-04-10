@@ -19,7 +19,7 @@
             <ul class="pagenav">
                 <li> <a href="#basics">Basics</a></li>
                 <li><a href= "#box">Box Model</a></li>
-                <li><a href="#tables">Tables</a></li>
+                
                 
             </ul>
         </header>
@@ -31,31 +31,36 @@
              <h3> All commands need a selector:X and atrributes in the property:value format</h3>
                 <p class="example"><span class="code">x{<br>  <span class="indent">property:value;</span><br>}</span></p>
                 <p class="example"><span class="code">h1{<br>  <span class="indent">color:pink;</span><br>}</span></p>
-            
-                
-                
+                <p>The CSS sheet must be linked to in the html head such as:</p>
+                <p><span class="code">&lt;link rel="stylesheet" href="./resources/css/stylesheet.css"></span></p>
+                <h3>Different kinds of Selectors</h3>
+                <p class="example"><span class="code">*{<br>  <span class="indent">font-family:Helvetica;</span><br>}</span></p>
+                <p>The * selector will select every type of element on the page. In this example making all text Helvetica</p>
+                <p class="example"><span class="code">.main{<br>  <span class="indent">background-color:pink;</span><br>}</span></p>
+                <p>The .class selector will select everything with the class= attribute in html. In this example everything assigned the main class will have a pink background.</p>
+                <p class="example"><span class="code">#ID{<br>  <span class="indent">color:pink;</span><br>}</span></p>
+                <p>The # atribute will select everything with id set in html</p>
+                <p class="example"><span class="code">h1, .example{<br>  <span class="indent">color:pink;</span><br>}</span></p>
+                <p>Using commas like this example will just select multiple things and setting the attributes to all selectors</p>
+                <p class="example"><span class="code">.example h1{<br>  <span class="indent">color:pink;</span><br>}</span></p>
+                <p>Not using commas it selects nested items. IN the example above it would select the h1 componenets within a .example class</p>
+                <p class="example"><span class="code">ul{<br>  <span class="indent">padding:20px 10px 5px 0px;</span><br>}</span></p>
+                <p class="example"><span class="code">ul{<br>  <span class="indent">margin:20px;</span><br>}</span></p>
+                <p class="example"><span class="code">ul{<br>  <span class="indent">padding:20px 10px;</span><br>}</span></p>
+                <p class="example"><span class="code">ul{<br>  <span class="indent">margin:20px 10px 5px;</span><br>}</span></p>
+                <p></p>
             </div>
             <div id='box'>
                 <h2>Box Model</h2>
                 <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">MDN Box model page</a></p>
                 <img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model.png">
                 </div>
-                <div>
-                <h3>
-                    Images
-                </h3>
-                    <p><span class="code">&lt;img src="url.com/dumbimage.jpg width=123px&gt;</span></p>
-                    <p>Images do not need a closing tag. Atrributes in opening tag. Must have src=url. can also be used to link to a
-                        relative path <Span class=code>&lt;img src=../media/dumbumage.jpg&gt;</Span> can have attributes such as sizing in pixels and %
-                    </p>
-                <h3>
-                    Video
-                </h3>
-                <h3>Embed</h3>
+            <div>
+
             </div>
         </main>
         <footer>
-            
+
         </footer>
     </body>
 </html>
