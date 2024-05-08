@@ -2,40 +2,68 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
-body{
-    background-color: black;
-    color: lightgrey;
+html{
+    background-color :rgb(20, 20, 20) ;
+    color: rgb(210, 210, 210)
 }
 
-header{
+.raleway{
+    font-family: 'Raleway';
+}
+
+.roboto{
+    font-family: "Roboto";
+}
+
+.robotocondensed{
+    font-family: 'Roboto Condensed';
+}
+
+
+nav{
     width: 100%;
     position:fixed;
     z-index: 10;
-    background-color: lightblue;
+    background-color: rgb(117, 120, 155);
 }
 
-header ul{
+nav ul{
     width: 100%;
     text-align: center;
-    background-color: lightblue;
+    
 }
 
-header li{
+nav li{
     display: inline-block;
-    padding: 20px;
+    margin: 10px;
     text-transform: uppercase;
 }
 
-.mainav{
+.mainav, .mainav a{
     font-size: 20px;
     font-family: 'Raleway';
+    color: rgb(0, 0, 255);
 }
 
 .pagenav{
     font-size: 18px;
     font-family: 'Raleway';
+}
+
+.pagenav li::before{
+    content: "<"
+}
+
+.pagenav li::after{
+    content: ">"
+}
+
+main{
+    position: relative;
+    top: 110px;
 }
 
 footer{
@@ -44,8 +72,9 @@ footer{
 }
 
 h1{
+    font-size:30px;
     text-align:center;
-    color:pink;
+    font-family: "Roboto" , Helvetica, sans-serif;
 }
 
 h2, h3{
@@ -56,16 +85,15 @@ h2, h3{
 p{
     font-size: 15px;
     margin:auto 5%;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    line-height: 20px;
 }
 
-main{
-    position: relative;
-    top: 150px;
-}
 
 table{
     margin: 20px auto;
     border: 2px solid;
+    background-color: rgba(81, 156, 231, 0.5);
 }
 
 thead{
@@ -114,4 +142,73 @@ table td{
 img{
     display: inline;
     margin: 0 auto;
+    padding: 20px;
+}
+
+#box a{
+    font-size:20px;
+    margin: 20px;
+}
+
+a{
+    color:blue;
+}
+
+a:visited{
+    color:darkblue;
+
+}
+
+a:hover{
+    text-decoration:none;
+    
+}
+/*
+.mainav a:visited, .pagenav a:visited{
+    color:#ef8d31;
+}
+*/
+
+.link{
+    font-size: 18px;
+}
+
+.box{
+    border: solid rgb(255, 255, 255) 2px;
+    width: 90%;
+    margin: 20px 5%;
+}
+
+.pallette{
+    border: solid rgb(255, 255, 255) 2px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+
+.offblack{
+    background-color: rgb(20, 20, 20);
+}
+
+.bluegray{
+    background-color: rgb(117, 120, 155);
+}
+
+.size20{
+    font-size:20px;
+}
+
+.size30{
+    font-size:30px;
+}
+
+.skyblue{
+    background-color: rgba(81, 156, 231, 0.5);
+}
+
+.font{
+    display:inline-block;
+    min-width: 250px;
+    margin-bottom: 10px;
 }

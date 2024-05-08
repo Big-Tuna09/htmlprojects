@@ -4,10 +4,11 @@
     <head>
         <title>MY Cheat Sheet</title>
         <link rel="stylesheet" href="./resources/css/stylesheet.css">
+        <link rel="stylesheet" href="./resources/css/flexbox.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header> 
+        <nav> 
             
             <ul class="mainav">
                 <li><a href="https://big-tuna09.github.io/htmlprojects/">Home</a></li>
@@ -19,14 +20,18 @@
             <ul class="pagenav">
                 <li> <a href="#basics">Basics</a></li>
                 <li><a href= "#box">Box Model</a></li>
-                
+                <li><a href= "#flexbox">Flexbox</a></li>
+                <li><a href= "#grid">Grid</a></li>
                 
             </ul>
-        </header>
+        </nav>
         
         <main>
             <h1>My cheat sheet to basic commands in web development(CSS)</h1>
             <div id="basics">
+                <div class="link">
+                    <a href="styleguide.html">My personal styling page</a>
+                </div>
             <h2>Basics</h2>
              <h3> All commands need a selector:X and atrributes in the property:value format</h3>
                 <p class="example"><span class="code">x{<br>  <span class="indent">property:value;</span><br>}</span></p>
@@ -43,20 +48,42 @@
                 <p class="example"><span class="code">h1, .example{<br>  <span class="indent">color:pink;</span><br>}</span></p>
                 <p>Using commas like this example will just select multiple things and setting the attributes to all selectors</p>
                 <p class="example"><span class="code">.example h1{<br>  <span class="indent">color:pink;</span><br>}</span></p>
-                <p>Not using commas it selects nested items. IN the example above it would select the h1 componenets within a .example class</p>
+                <p>Not using commas it selects nested items. In the example above it would select the h1 componenets within a .example class</p>
                 <p class="example"><span class="code">ul{<br>  <span class="indent">padding:20px 10px 5px 0px;</span><br>}</span></p>
                 <p class="example"><span class="code">ul{<br>  <span class="indent">margin:20px;</span><br>}</span></p>
                 <p class="example"><span class="code">ul{<br>  <span class="indent">padding:20px 10px;</span><br>}</span></p>
                 <p class="example"><span class="code">ul{<br>  <span class="indent">margin:20px 10px 5px;</span><br>}</span></p>
-                <p></p>
+                <p>In the margin and padding attributes if you use one value like the second example it will apply to all 4 sides. If you use all 4 it applies in the top, right, bottom left order. like NESW compass order. If you use 2 values it will apply to the vertical ones and then the horizontal values. And three values will apply in the order top, sides, bottom.</p>
+                <p class="example"><span class="code">a:hover{<br>  <span class="indent">color:orange;</span><br>}</span></p>
+                <p>You can use the <em>psuedo-class</em> hover to change attributes when the mouse is over the property other pseudo-classes are :link, :hover, :active, and :visited</p>
             </div>
             <div id='box'>
                 <h2>Box Model</h2>
                 <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">MDN Box model page</a></p>
                 <img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model.png">
                 </div>
-            <div>
-
+            <div id="flexbox">
+                <h2>flexbox</h2>
+                <p class="example"><span class="code">div{<br>  <span class="indent">display:inline-flex;</span><br><span class="indent">justify-content:space around;</span><br><span class="indent">align-items:baseline;</span><br>}</span></p>
+                <p>flexbox is the parent item with a display of inline-flex, justify content is left to right alignment and align-items is vertical alignment</p>
+                <p>flex-basis is the value(px, %?) that the item will be before shrink or grow. flex-grow is how much a flex item should strech to fill width proportionatally, with 0(default) being none of course. flex-shrink is obviously the opposite with default of 1.
+                </p><p>flex: is a shorthand for grow/shrink/basis in that order. <span class="code">flex: 2 1 200px;</span> will gow at a rate of 2 shrink at 1 and have a basis of 200 px.
+                    <br>Minimum and max values will take precedence over flex properties.</p>
+                    <p><span class="code">flex-wrap</span> can be used to move flex items to the next line if needed. wrap will move them to the next line if needed.<br>wrap-reverse will move the 1st items down making a row above to wrap to. no-wrap is default</p>
+                    <p><span class="code">align-content</span> can be used to space rows within a flexbox</p>
+                    <p><span class="code">flex-direction</span> default is rows. If you give the direction a value of column it will default to columns instead. Can also take row-reverse and column-reverse</p>
+                    <p><span class="code">flex-flow</span> can be used to shorthand <span class="code">flex-direction</span> and <span class="code">flex-wrap</span> eg. <span class="code">flex-flow:column wrap</span></p>
+                </div>
+            <div id="grid">
+                <h2>Grids</h2>
+                    <p>Can make a parent object a grid by using <span class=code>display:grid</span><br>Can make grid columns and rows set with <span class=code>grid-template-columns</span>
+                    and <span class=code>grid-template-rows:50px 50% 1fr;</span> fr units are just shorthand for fractional units. For instance 1 fr 2fr 1fr is equal to 1/4 2/4 and 1/4. the fr units will
+                    take up fractions of the remaining space if used in conjunction with px or % units.<br> You can combine rows and columns with <span class="code">grid-template: 1fr 50% 1fr / 2fr 1fr 1fr;</span> everything before the / is <em>rows</em> and after the / is <em>columns.</em></p>
+                    <p>Can add gaps using <span class=code>column-gap, row-gap</span> and <span class=code>gap</span> gap combines them into one attribute with rows first <span class=code>gap: 20px 5px:</span> will put 20px gap between rows and 5px between columns</p>
+                    <h3>children attributes</h3>
+                     <p>Can specify the number of rows/columns a child takes up using <span class=code>grid-column-start, grid-column-end, grid-row-start,</span> and <span class=code>grid-row end</span>
+                    These can be shortened to <span class=code>grid-row:2 5;</span> or using span:<span class=code>grid-column:2 span 3;</span> and these can be shortened using <span class=code>grid-area: 2 / 2 / 5/ span 3;</span><br>
+                    This has the order row-start / column-start / row-end / column end.</p>
             </div>
         </main>
         <footer>
