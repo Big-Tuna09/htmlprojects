@@ -7,8 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header> 
-            
+        
+            <nav>
             <ul class="mainav">
                 <li><a href="https://big-tuna09.github.io/htmlprojects/">Home</a></li>
                 <li><a href="html.html">html</a></li>
@@ -22,7 +22,8 @@
                 <li><a href="#tables">Tables</a></li>
                 
             </ul>
-        </header>
+            </nav>
+        
         
         <main>
             <h1>My cheat sheet to basic commands in web development(html)</h1>
@@ -31,6 +32,7 @@
              <h3> All commands need closing tag(&lt;/&gt;) unless otherwise stated</h3>
             
                 <p>Attributes are assigned in opening brackets eg <span class="code">&lt;div class="header"&gt;</span></p>
+                <p> other attributes, href=(path/url), id=#unique-identifier, title="mousover-text".</p>
                 <table>
                 <thead>
                     <tr>
@@ -76,9 +78,24 @@
                         <td>usually contains the main body of text on the page</td>
                     </tr>
                     <tr>
+                        <td><span class="code">&lt;a&gt;</span></td>
+                        <td>link</td>
+                        <td>makes a link externally or internally</td>
+                    </tr>
+                    <tr>
                         <td><span class="code">&lt;br&gt;</span></td>
                         <td>line break</td>
                         <td>makes a line break anywhere</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;span&gt;</span></td>
+                        <td>span</td>
+                        <td>spans are kept in line whit the rest of content. Used to make classes or id's for formatting in CSS or links etc</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;button&gt;</span></td>
+                        <td>makes a button..</td>
+                        <td>probably has a js action or link associated</td>
                     </tr>
                 </tbody>
             </table>
@@ -90,8 +107,8 @@
                 </h3>
                     <p><span class="code">&lt;img src="url.com/dumbimage.jpg width=123px&gt;</span></p>
                     <p>Images do not need a closing tag. Atrributes in opening tag. Must have src=url. can also be used to link to a
-                        relative path <Span class=code>&lt;img src=../media/dumbumage.jpg&gt;</Span> can have attributes such as sizing in pixels and %
-                    </p>
+                        relative path <Span class=code>&lt;img src=../media/dumbumage.jpg&gt;</Span> Can have attributes such as sizing in pixels and %
+                    You can also nest it inside of an <span class="code">&lt;a href=&gt;</span> tag to make the image into a link. Another common attribute is alttext to make a text if the image is not loaded.</p>
                 <h3>
                     Video
                 </h3>
@@ -101,9 +118,49 @@
                 <p><span class="code">&lt;embed src=url&gt;</span></p>
                 <p>basically the same as video but can accept gifs and pics etc</p>
             </div>
+            <div id="tables">
+                <h2>Tables</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>syntax</td>
+                            <td>name</td>
+                            <td>description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">&lt;table&gt;</span></td>
+                            <td>starts table</td>
+                            <td>all table elements within these tags</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;thead&gt; &lt;tbody&gt;</span></td>
+                            <td>starts table head and body</td>
+                            <td>head usually has the column names and body the actual table</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;tr&gt;</span></td>
+                            <td>table row</td>
+                            <td>starts new row in table (even the head)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;td&gt;</span></td>
+                            <td>table data</td>
+                            <td>this is actually contents of individual cell</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;colspan&gt; &lt;rowspan&gt;</span></td>
+                            <td>spans</td>
+                            <td>how many rows or columns the cell can take up if >1 </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </main>
         <footer>
-            
+
         </footer>
     </body>
 </html>
