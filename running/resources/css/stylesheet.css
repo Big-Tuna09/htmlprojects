@@ -53,3 +53,12 @@ footer{
     height:3rem;
     justify-content: space-between;
 }
+
+#pics{
+    display: flex;
+
+}
+
+.pic-container{
+    
+}
