@@ -3,28 +3,61 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.header{
+header{
   position:fixed;
   top: 0px;
   z-index:10;
   background-color: white;
   width: 100%;
 }
-.navigation ul {
-  border: red 5px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom: solid 2px gray;
+  height: 50px;
 }
 
-.navigation li {
+ul{
+  align-content: center;
+}
+
+nav li {
   display: inline-block;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 2px;
-  padding: 20px;
+  padding: 10px;
 }
 
-.navigation  li.logo {
+nav a{
+  font-weight: 400;
+  /*text-decoration: underline; */
+  background-color: black;
+  color:white;
+  border-radius: 5px;
+  padding: 3px 7px;
+  border: 2px solid black;
+}
+
+nav a:hover{
+  background-color: gray;
+  color: black;
+  font-weight: 600;
+}
+
+nav a:active{
+  background-color: rgb(67, 115, 188);
+  color: black;
+}
+
+nav img{
+  height: 25px;
+  padding: 10px 20px;
+  margin: auto 0;
+}
+
+nav  li.logo {
   color: black;
   font-size: 18px;
   font-weight: 700;
@@ -33,8 +66,10 @@ body {
 
 #banner {
   position:relative;
-  top:70px;
-  background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+  top:52px;
+  background-image: url(media/sea.avif);
+  background-color: rgb(67, 115, 188);
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: bottom center;
   height: 700px;
@@ -44,9 +79,10 @@ body {
 #banner .content h1 {
   border: 3px solid white;
   position: relative;
-  top: 50px;
+  top: 200px;
+  left: 300px;
   width: 400px;
-  margin: 0 auto;
+  padding:10px 0px;
 }
 
 #main {
@@ -66,13 +102,13 @@ h1 {
 }
 
 h2 {
-  border: 1px dotted red;
-  color: red;
-  font-size: 14px;
+  color: white;
+  font-size: 30px;
   line-height: 48px;
   padding: 20px 30px;
   margin: 30px 20px;
   text-align: center;
+  font-weight: 600;
 }
 
 h3 {
@@ -91,17 +127,8 @@ p {
   overflow:auto;
 }
 
-.pull-quote {
-  margin:0 auto;
-  width:90%
-}
-
-.byline {
-  border-bottom: 1px solid LightGrey;
-  border-top: 1px solid LightGrey;
-  color: DarkGrey;
-  font-size: 14px;
-  font-weight: 200;
+.container{
+  display: inline-flex;
 }
 
 .share {
@@ -110,6 +137,7 @@ p {
   position: relative;
   text-align: center;
   width: 100%;
+  margin-top: 50px;
 }
 
 .share a {
@@ -129,6 +157,26 @@ p {
   color: red;
 }
 
-.donate{
-  display:none;
+.projects{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.container{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.proj-box{
+  border: solid white 3px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.proj-box a{
+  color:white;
+}
+
+.heading{
+  padding: 50px;
 }
