@@ -43,7 +43,10 @@ header div{
     padding-right:0.5rem;
 }
 
-
+.textArea{
+    display: flex;
+    min-height: 200px;
+}
 
 footer{
     border-top: 2px solid black ;
