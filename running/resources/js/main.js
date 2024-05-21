@@ -75,7 +75,7 @@ const randomMsg = () => {
 
 const insertMsg = () =>{
 document.getElementById("randomMessage").innerHTML= randomMsg();
-console.log(randomMsg());
+//console.log(randomMsg());
 }
 
 document.getElementById("runmsg").onclick = insertMsg

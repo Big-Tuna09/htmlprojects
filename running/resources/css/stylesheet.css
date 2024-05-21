@@ -34,6 +34,18 @@ h1{
     font-weight:600;
 }
 
+@media screen and (max-width: 534px) {
+    .full-screen{
+        display:none;
+    }
+}
+
+@media screen and (min-width:535px) {
+    .mobile{
+        display:none;
+    }
+}
+
 h2, label{
     color:white;
     font-size: 2rem;
@@ -82,7 +94,7 @@ h3 a{
 
 @media screen and (max-width: 900px) {
     .textArea{
-        flex-flow: column-reverse nowrap;
+        flex-flow: column nowrap;
     }
 
     .textArea div{
@@ -120,6 +132,7 @@ h3 a{
     .pic-container{
         width:50%;
     }
+
 }
 
 footer{
