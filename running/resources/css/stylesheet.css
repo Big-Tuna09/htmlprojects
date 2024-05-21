@@ -58,12 +58,26 @@ header div{
 
 .textArea{
     display: flex;
+    flex-flow: row wrap;
     min-height: 200px;
     justify-content: space-evenly;
 }
 
 .textArea div{
     width: 45%;
+    padding: 0.5rem 0;
+}
+
+.events{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+h3 a{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 900px) {
