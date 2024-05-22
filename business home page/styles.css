@@ -1,0 +1,215 @@
+html{
+    font-size: 16px;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 800;
+    margin:1.5rem;
+}
+
+h3{
+    font-size:1.3rem;
+    font-weight: 600;
+}
+
+/* nav bar */
+
+nav{
+    height: 3.75rem;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px gray;
+    background-color: white;
+    z-index: 5;
+}
+
+nav .name{
+    margin: 0 0.5rem;
+}
+
+nav .linkbar ul{
+    display: flex;
+}
+
+nav .linkbar a{
+    margin:0 0.5rem;
+    text-decoration:underline;
+    font-size: 1.35rem;
+}
+
+nav .rectangle{
+    border: solid blue 6px;
+    height:1rem;
+    width: 0.5rem;
+}
+
+nav .rectangle::before{
+    content: ' ';
+    display: inline-block;
+    height:0;
+    width:0;
+    border-left: solid 11px transparent;
+    border-bottom:solid 14px  blue ;
+    border-right: solid 11px transparent;
+    position: relative;
+    left:-6.5px;
+    bottom:18px;
+}
+
+nav .rectangle::after{
+    content: ' ';
+    display: inline-block;
+    height:0;
+    width:0;
+    border-left: solid 10px blue;
+    border-bottom:solid 14px  transparent ;
+    border-right: solid 10px blue;
+    position: relative;
+    left:-6px;
+    top:5px;
+}
+
+
+header{
+    display: flex;
+    width:100%;
+    background-size:cover ;
+    background-image: url(Media/generic.avif);
+    background-color: rgba(0, 0, 255, 0.9);
+    background-blend-mode: multiply;
+    background-repeat: none;
+    background-position: center;
+    min-height: 15rem;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.mission{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: gray; 
+    color:white;
+    height: fit-content;
+    width:fit-content;
+    align-content: center;
+
+}
+
+
+.mission h1, .mission h3{
+    padding:.5rem;
+}
+
+@media only screen and (min-width: 900px) {
+    nav .rectangle::after{
+        left:-5px;
+    }
+
+    nav .rectangle::before{
+        left:-6px;
+    }
+}
+
+.values{
+    display: flex;
+    flex-flow: row wrap;
+    width:95%;
+    margin:1.5rem auto;
+    justify-content: space-evenly;
+}
+
+.values .container{
+    border:solid 1px gray;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.values img{
+    margin:0.5rem;
+}
+
+ .values h3{
+    margin:0.5rem;
+}
+
+/*capabilities*/
+
+.capabilities{
+    display: flex;
+    flex-flow: row wrap;
+    width:95%;
+    margin:1.5rem auto;
+    justify-content: space-evenly;
+}
+
+.capabilities .container{
+    border:solid 1px gray;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.capabilities h3{
+    margin:0.5rem;
+}
+
+.capabilities img{
+    margin:0.5rem;
+}
+
+.team{
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url(Media/conveyorbelt.webp);
+    background-color: rgba(0, 0, 255, 0.9);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin:1.5rem auto;
+    justify-content: space-evenly;
+}
+
+.team .container{
+    border:solid 1px gray;
+    text-align: center;
+    margin: 1rem;
+    background-color: white;
+    height:30rem;
+    width: 25rem;
+}
+
+.team h3{
+    margin:0.5rem;
+}
+
+.team img{
+    margin:0.5rem;
+    border: 1px solid black;
+    height:85%;
+    max-width:90%;
+    object-fit: cover;
+}
+
+.contact{
+    border-top:1px solid gray;
+
+}
+
+p{
+    margin:2rem;
+}
+
+p strong{
+    font-weight: bold;
+}
