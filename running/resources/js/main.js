@@ -1,6 +1,7 @@
 
 //first part of msg arr with possible run times function to return msg;
 const Runarr = [30, 40, 60, 75, 90, 120, 150];
+let effortNumber = 0
 
 const firstPart = () => {
   let time = Runarr[Math.floor(Math.random()*Runarr.length)];
@@ -29,14 +30,19 @@ const easyOrHardarr = ['relaxed', 'easy', 'good', 'hard', 'all out'];
 const howHard = easyOrHardarr[Math.floor(Math.random()*easyOrHardarr.length)]
 
 if (howHard === 'relaxed') {
+    effortNumber = 0;
     return 'Run relaxed, this is time to recover while you run.'
 } else if (howHard === 'easy') {
+    effortNumber = 1;
     return 'Run easy, this is your everyday run pace. Just out for a jog.'
 } else if (howHard === 'good') {
+    effortNumber = 2;
     return 'Run at a good pace. Keep up a little bit of pace for a tempo-like run.'
 } else if ( howHard === 'hard') {
+    effortNumber = 3;
     return 'Run at a hard pace. keep up that heart rate for this speed run, this will be at race pace.'
 } else if (howHard === 'all out') {
+    effortNumber = 4;
     return 'Run all out and try not to die'
 }
 }
@@ -74,7 +80,22 @@ const randomMsg = () => {
 }
 
 const insertMsg = () =>{
-document.getElementById("randomMessage").innerHTML= randomMsg();
+    let message = document.getElementById("randomMessage")
+    message.innerHTML= randomMsg();
+    if (effortNumber === 0) {
+        message.style = "color:lightgreen";
+    } else if (effortNumber === 1) {
+        message.style = "color:green";
+    } else if (effortNumber === 2) {
+        message.style = "color:yellow";
+    } else if (effortNumber === 3) {
+        message.style = "color:orange";
+    } else if (effortNumber === 4) {
+        message.style = "color:red";
+    } else {
+        message.style = "color:white";
+    }
+    
 //console.log(randomMsg());
 }
 
