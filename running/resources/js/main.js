@@ -80,7 +80,7 @@ const randomMsg = () => {
 }
 
 const insertMsg = () =>{
-    let message = document.getElementById("randomMessage")
+    let message = document.querySelector("#randomMessage")
     message.innerHTML= randomMsg();
     if (effortNumber === 0) {
         message.style = "color:lightgreen";
@@ -99,4 +99,4 @@ const insertMsg = () =>{
 //console.log(randomMsg());
 }
 
-document.getElementById("runmsg").onclick = insertMsg
+document.querySelector("#runmsg").onclick = insertMsg
